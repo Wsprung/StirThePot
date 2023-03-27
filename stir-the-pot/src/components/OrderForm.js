@@ -8,6 +8,7 @@ import {
   } from "@material-ui/core"; // https://mui.com/material-ui/getting-started/installation/
 import React from 'react';
 import { Controller, useForm } from "react-hook-form";
+import './OrderForm.css';
 
 export default function OrderForm() {
     // useForm is the primary hook, useController is only made for controlled components
@@ -31,15 +32,42 @@ export default function OrderForm() {
         // "handleSubmit" will validate your inputs before invoking "onSubmit"
     // passes submission to values
     const onSubmit = (values) => {
+      // Want handleSubmit to be called with values
         console.log(values);
     };
-
+    // Left off figuring how to pass values to event
+      // Must remove predeclared handleSubmit and redeclare
+      // See if this has to be a handleSubmit function or not
+    async function handleSubmit(event) {
+      event.preventDefault();
+      
+      const data = {
+        name: 'John',
+        chickenNoodle: 'true',
+        tomato: 'john.doe@example.com',
+        butternutSquash: ' '
+      };
+      
+      const response = await fetch('https://script.google.com/macros/s/1nvjAntDoAjLsJ-yti8nTG84VMWtKoo1ogm6APkj4pbrsknlnFj2f8wdZ/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+      
+      if (response.ok) {
+        console.log('Data submitted successfully!');
+      } else {
+        console.error('Error submitting data:', response.statusText);
+      }
+    }
+    
   return (
-    <div>OrderForm
+    <div className = "form-control">OrderForm
     <form onSubmit={handleSubmit(onSubmit)}>
-        <div className = "form-control">
 
-        </div>
         <Controller 
         // a controlled component is one that gets and sets its current "state" via props
             control = {control} // control object returned from useForm instead of register
@@ -51,20 +79,48 @@ export default function OrderForm() {
                  <TextField {...field} label="Name" />
             )}
         />
-        <label>Select your soup</label>
-        <Controller
-        control={control}
-        name="chickennoodlesoup"
-        // Checkbox accepts props value as checked instead of value, so you cannot as easily spread field into it
-        render={({ field: { value, onChange } }) => (
-          // Checkbox accepts its value as `checked`
-          // so we need to connect the props here
-          <FormControlLabel
-            control={<Checkbox checked={value} onChange={onChange} />}
-            label="Chicken noodle soup"
+        <div className = "checkbox-soup"> 
+          <label>Select your soup: </label>
+          <Controller className = "controller"
+              control={control}
+              name="chickennoodlesoup"
+              // Checkbox accepts props value as checked instead of value, so you cannot as easily spread field into it
+              render={({ field: { value, onChange } }) => (
+                // Checkbox accepts its value as `checked`
+                // so we need to connect the props here
+              <FormControlLabel
+              control={<Checkbox checked={value} onChange={onChange} />}
+              label="Chicken noodle soup"
+            />
+          )}  
           />
-        )}  
-        />
+          <Controller className = "controller"
+              control={control}
+              name="tomatosoup"
+              // Checkbox accepts props value as checked instead of value, so you cannot as easily spread field into it
+              render={({ field: { value, onChange } }) => (
+                // Checkbox accepts its value as `checked`
+                // so we need to connect the props here
+              <FormControlLabel
+              control={<Checkbox checked={value} onChange={onChange} />}
+              label="Tomato soup"
+            />
+          )}  
+          /> 
+          <Controller className = "controller"
+              control={control}
+              name="butternutsquash"
+              // Checkbox accepts props value as checked instead of value, so you cannot as easily spread field into it
+              render={({ field: { value, onChange } }) => (
+                // Checkbox accepts its value as `checked`
+                // so we need to connect the props here
+              <FormControlLabel
+              control={<Checkbox checked={value} onChange={onChange} />}
+              label="Butternut squash soup"
+            />
+          )}  
+          />
+        </div>
         <Button type="submit" variant="contained" color="primary">
         Submit
       </Button>
