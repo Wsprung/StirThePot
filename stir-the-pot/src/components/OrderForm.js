@@ -1,130 +1,99 @@
 // https://www.freecodecamp.org/news/how-to-create-forms-in-react-using-react-hook-form/
 // https://dev.to/elyngved/turn-anything-into-a-form-field-with-react-hook-form-controller-42c
 import {
-    Button,
-    Checkbox,
-    FormControlLabel,
-    TextField
-  } from "@material-ui/core"; // https://mui.com/material-ui/getting-started/installation/
-import React from 'react';
+  Button,
+  Checkbox,
+  FormControlLabel,
+  Container,
+  TextField
+} from "@material-ui/core"; // https://mui.com/material-ui/getting-started/installation/
+import React, {useState, useEffect} from 'react'
 import { Controller, useForm } from "react-hook-form";
 import './OrderForm.css';
 
-export default function OrderForm() {
-    // useForm is the primary hook, useController is only made for controlled components
-    const {
-        // function we can call when the form is submitted
-        handleSubmit,
 
-        // Takes care of the registration process
-        control,
 
-        // errors is a nested property in the formState object which will contain the validation errors, if any
-        formState: {errors}
-    } = useForm({
-        defaultValues: {
-            firstName: "",
-            chickennoodlesoup: false
-        }
+export default function OrderForm2() {
+// state form form data values
+const [isChecked, setIsChecked] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    chickenNoodle: false,
+    tomato: false,
+    butternutSquash: false
+  });
+
+  function handleCheckboxChange(event, value) {
+    setIsChecked(event.target.checked); // Setting checkbox to checked for UI, also sets isChecked to true
+    // left off here, seeing if there is a way to generalize so what is checked specifically is updated
+    setFormData(prevState => ({
+      ...prevState,
+      value: true
+      //type: true
+    }));
+  }
+
+  // function that will handle the form submission
+  // uses the fetch API to send the data to backend API using the POST method
+  // using sheet.best API
+  // when the form is submitted, the handleSubmit function will be called and the data will be sent to the backend API
+  async function handleSubmit(event) {
+    event.preventDefault();
+  
+    // using the fetch function to make POST request to sheet.best endpoint
+    const response = await fetch('https://sheet.best/api/sheets/2ad570f7-1120-4a4f-bb3c-eb2146ac3827', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData) // passing in formData object as request body
     });
+  }
 
-    // passed to the handleSubmit method
-        // "handleSubmit" will validate your inputs before invoking "onSubmit"
-    // passes submission to values
-    const onSubmit = (values) => {
-      // Want handleSubmit to be called with values
-        console.log(values);
-    };
-    // Left off figuring how to pass values to event
-      // Must remove predeclared handleSubmit and redeclare
-      // See if this has to be a handleSubmit function or not
-    async function handleSubmit(event) {
-      event.preventDefault();
-      
-      const data = {
-        name: 'John',
-        chickenNoodle: 'true',
-        tomato: 'john.doe@example.com',
-        butternutSquash: ' '
-      };
-      
-      const response = await fetch('https://script.google.com/macros/s/1nvjAntDoAjLsJ-yti8nTG84VMWtKoo1ogm6APkj4pbrsknlnFj2f8wdZ/exec', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      });
-      
-      if (response.ok) {
-        console.log('Data submitted successfully!');
-      } else {
-        console.error('Error submitting data:', response.statusText);
-      }
-    }
-    
-  return (
-    <div className = "form-control">OrderForm
-    <form onSubmit={handleSubmit(onSubmit)}>
+  function calculateCost() {
+    // Parse through checked soups and add up cost
+  }
 
-        <Controller 
-        // a controlled component is one that gets and sets its current "state" via props
-            control = {control} // control object returned from useForm instead of register
-            name = "firstName" // tells the form which field to control
-            render = {({ field }) => (
-                 // Custom field component goes here
-                 // Material UI TextField already supports "value" and "onChange" so no need to add in render
-                 // If field uses value and onChange prop names, simply use ...field to spread field input into the component
-                 <TextField {...field} label="Name" />
-            )}
-        />
-        <div className = "checkbox-soup"> 
-          <label>Select your soup: </label>
-          <Controller className = "controller"
-              control={control}
-              name="chickennoodlesoup"
-              // Checkbox accepts props value as checked instead of value, so you cannot as easily spread field into it
-              render={({ field: { value, onChange } }) => (
-                // Checkbox accepts its value as `checked`
-                // so we need to connect the props here
-              <FormControlLabel
-              control={<Checkbox checked={value} onChange={onChange} />}
-              label="Chicken noodle soup"
-            />
-          )}  
-          />
-          <Controller className = "controller"
-              control={control}
-              name="tomatosoup"
-              // Checkbox accepts props value as checked instead of value, so you cannot as easily spread field into it
-              render={({ field: { value, onChange } }) => (
-                // Checkbox accepts its value as `checked`
-                // so we need to connect the props here
-              <FormControlLabel
-              control={<Checkbox checked={value} onChange={onChange} />}
-              label="Tomato soup"
-            />
-          )}  
-          /> 
-          <Controller className = "controller"
-              control={control}
-              name="butternutsquash"
-              // Checkbox accepts props value as checked instead of value, so you cannot as easily spread field into it
-              render={({ field: { value, onChange } }) => (
-                // Checkbox accepts its value as `checked`
-                // so we need to connect the props here
-              <FormControlLabel
-              control={<Checkbox checked={value} onChange={onChange} />}
-              label="Butternut squash soup"
-            />
-          )}  
-          />
-        </div>
-        <Button type="submit" variant="contained" color="primary">
-        Submit
-      </Button>
-    </form>
-    </div>
-  )
+  function receipt() {
+    // Create and display receipt 
+  }
+
+return (
+  <Container className="container">
+    <div className = "order-form">
+        <form onSubmit = {handleSubmit}>
+          <label> 
+            Name
+             <input placeholder='Enter your name' type="text" name="name" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })}/>
+          </label>
+          <label> 
+            Email
+          <input placeholder='Enter your email' type="email" name="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+          </label>
+          <div className = "checkbox-soup">
+            <br></br>
+            <label className = "check-the-soups">Check off the soup(s) you are ordering</label>
+            <label>
+              <input type="checkbox" checked={isChecked} onChange={setFormData} />
+              Chicken Noodle Soup
+            </label>
+            <label>
+              <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
+              Tomato Soup
+            </label>
+            <label>
+              <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
+              Butternut Squash
+            </label>
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+  </Container>
+)
 }
+
+  
+
