@@ -25,13 +25,36 @@ const [isChecked, setIsChecked] = useState(false);
   });
 
   function handleCheckboxChange(event, value) {
-    setIsChecked(event.target.checked); // Setting checkbox to checked for UI, also sets isChecked to true
+    event.preventDefault();
+    console.log(event.target);
+    setIsChecked(event.target.checked);
+   
     // left off here, seeing if there is a way to generalize so what is checked specifically is updated
-    setFormData(prevState => ({
-      ...prevState,
-      value: true
-      //type: true
-    }));
+      // trying to find a way to pass event and value in onChange
+      console.log(value);
+    if(value == 1) {
+      setFormData(prevState => ({
+        ...prevState,
+        chickenNoodle: event.target.value
+        //type: true
+      }));
+    }
+    else if(value == 2) {
+        setFormData(prevState => ({
+          ...prevState,
+          tomato: !formData.chickenNoodle
+          //type: true
+        }));
+    }
+    else if(value == 3) {
+      setFormData(prevState => ({
+        ...prevState,
+        butternutSquash: !formData.butternutSquash
+        //type: true
+      }));
+      
+      //setIsChecked(event.target.checked); // Setting checkbox to checked for UI, also sets isChecked to true (need to keep to change box to checked)
+  }
   }
 
   // function that will handle the form submission
@@ -75,15 +98,15 @@ return (
             <br></br>
             <label className = "check-the-soups">Check off the soup(s) you are ordering</label>
             <label>
-              <input type="checkbox" checked={isChecked} onChange={setFormData} />
+              <input type="checkbox" checked={isChecked} onChange={(e) => handleCheckboxChange(e, 1)} />
               Chicken Noodle Soup
             </label>
             <label>
-              <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
+              <input type="checkbox" checked={formData[4]} onChange={(e) => handleCheckboxChange(e, 2)} />
               Tomato Soup
             </label>
             <label>
-              <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
+              <input type="checkbox" checked={formData[5]} onChange={(e) => handleCheckboxChange(e, 3)} />
               Butternut Squash
             </label>
           </div>
