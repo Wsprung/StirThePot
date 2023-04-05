@@ -1,0 +1,95 @@
+html{
+  font-family: "Open Sans", sans-serif;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  color: black;
+  font-weight: 400;
+  width: 100% !important;
+  height: 100% !important;
+}
+h2{
+  padding: 10;
+  margin: 0 0 20px;
+  font-weight: 800;
+  font-size: 36px;
+  color: #245b31;
+  text-align: center;
+}
+p {
+  font-size: 15px;
+}
+.btn-custom-popup {
+    display: inline-flex;
+    justify-content: end;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #245b31;
+    background-image: green;
+    padding: 14px 34px;
+    letter-spacing: 1px;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 25px;
+    transition: all 0.5s linear;
+    border: 0;
+  }
+  .btn-custom:hover,
+  .btn-custom:focus,
+  .btn-custom.focus,
+  .btn-custom:active,
+  .btn-custom.active {
+    color: #fff;
+    background-image: none;
+    background-color: #245b31;
+  }
+  .btn:active,
+  .btn.active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  a:focus,
+  .btn:focus,
+  .btn:active:focus,
+  .btn.active:focus,
+  .btn.focus,
+  .btn:active.focus,
+  .btn.active.focus {
+    outline: none;
+    outline-offset: none;
+  }
+  .popup-box {
+    width: 100%;
+    height: 35%;
+    background-color: white;
+    text-align: center;
+}
+.input {
+    margin: 10px auto;
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+.input-box{
+    width: 50%;
+    height: 20px;
+}
+label{
+    margin-left: 140;
+    font-size: large;
+    text-align: center;
+}
+.popup-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 100%
+}
