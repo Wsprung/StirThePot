@@ -208,7 +208,6 @@ a:focus,
   display: table;
   width: 100%;
   padding: 0;
-  background: url(../img/intro-bg.jpg) center center no-repeat;
   background-color: #e5e5e5;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -464,7 +463,7 @@ header .intro-text {
   color: rgba(255, 255, 255, 0.75);
 }
 #contact .section-title {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 #contact .section-title p {
   font-size: 16px;
@@ -472,8 +471,10 @@ header .intro-text {
 #contact h2 {
   color: #fff;
   margin-top: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   padding-bottom: 15px;
+  font-family: staatliches;
+  font-size: 40px;
 }
 #contact .section-title h2::after {
   position: absolute;
@@ -506,6 +507,9 @@ header .intro-text {
 #contact .btn-custom:hover {
   color: #1f386e;
   background: #fff;
+}
+.check-the-soups {
+  font-size: 15px;
 }
 label {
   font-size: 12px;
@@ -547,6 +551,11 @@ label {
 }
 .form-control:-ms-input-placeholder {
   color: #777;
+}
+.checkbox-soup {
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;  optional - this centers the components horizontally */
 }
 #contact .contact-item {
   margin: 20px 0;

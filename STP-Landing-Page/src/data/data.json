@@ -1,7 +1,7 @@
 {
   "Header": {
-    "title": "We are a Landing Page",
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+    "title": "Welcome to Stir the Pot",
+    "paragraph": "Stir the Pot is giving new life to a treasured tradition by creating flavors you crave using sustainably-sourced ingredients and top-notch nutrition. From beloved classics like Chicken Noodle, to inspired innovations like Adaptogenic Heal Broth, we are stirring the pot and making soup sexy. Our mission focuses on reducing food waste and giving back to the local community one ladle at a time."
   },
   "About": {
     "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -154,10 +154,8 @@
   "Contact": {
     "address": "4321 California St, San Francisco, CA 12345 ",
     "phone": "+1 123 456 1234",
-    "email": "info@company.com",
-    "facebook": "fb.com",
-    "twitter": "twitter.com",
-    "youtube": "youtube.com"
+    "email": "stirthepotsoups@gmail.com",
+    "instagram": "https://www.instagram.com/gustirthepot/"
   },
   "Features": [
     {
