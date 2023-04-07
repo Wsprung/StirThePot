@@ -4,25 +4,25 @@
     "paragraph": "Stir the Pot is giving new life to a treasured tradition by creating flavors you crave using sustainably-sourced ingredients and top-notch nutrition. From beloved classics like Chicken Noodle, to inspired innovations like Adaptogenic Heal Broth, we are stirring the pot and making soup sexy. Our mission focuses on reducing food waste and giving back to the local community one ladle at a time."
   },
   "About": {
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "paragraph": "We spent a lot of time wondering…where is the soup? So we made some. As the only soup-based fast casual dining concept, Stir the Pot is giving new life to a treasured tradition by creating flavors you crave using sustainably-sourced ingredients and top-notch nutrition. With the highest quality of local and ethical sourcing, you can feel good about what you are putting in your body and the impact you are having on your community. We craft our soups by combining science-based wellness with phenomenal flavor, because we believe taste is equally as important as nutrition. From beloved classics like Chicken Noodle, to inspired innovations like Adaptogenic Heal Broth, we are stirring the pot and making soup sexy.",
     "Why": [
-      "Lorem ipsum dolor",
-      "Tempor incididunt",
-      "Lorem ipsum dolor",
-      "Incididunt ut labore"
+      "",
+      "",
+      "",
+      ""
     ],
     "Why2": [
-      "Aliquip ex ea commodo",
-      "Lorem ipsum dolor",
-      "Exercitation ullamco",
-      "Lorem ipsum dolor"
+      "",
+      "",
+      "",
+      ""
     ]
   },
   "Gallery": [
     {
       "title": "Project Title",
       "largeImage": "img/portfolio/01-large.jpg",
-      "smallImage": "img/portfolio/01-small.jpg"
+      "smallImage": "img/portfolio/01-small.jpeg"
     },
     {
       "title": "Project Title",
@@ -32,37 +32,37 @@
     {
       "title": "Project Title",
       "largeImage": "img/portfolio/03-large.jpg",
-      "smallImage": "img/portfolio/03-small.jpg"
+      "smallImage": "img/portfolio/03-small.jpeg"
     },
     {
       "title": "Project Title",
       "largeImage": "img/portfolio/04-large.jpg",
-      "smallImage": "img/portfolio/04-small.jpg"
+      "smallImage": "img/portfolio/04-small.jpeg"
     },
     {
       "title": "Project Title",
       "largeImage": "img/portfolio/05-large.jpg",
-      "smallImage": "img/portfolio/05-small.jpg"
+      "smallImage": "img/portfolio/05-small.jpeg"
     },
     {
       "title": "Project Title",
       "largeImage": "img/portfolio/06-large.jpg",
-      "smallImage": "img/portfolio/06-small.jpg"
+      "smallImage": "img/portfolio/06-small.jpeg"
     },
     {
       "title": "Project Title",
       "largeImage": "img/portfolio/07-large.jpg",
-      "smallImage": "img/portfolio/07-small.jpg"
+      "smallImage": "img/portfolio/07-small.jpeg"
     },
     {
       "title": "Project Title",
       "largeImage": "img/portfolio/08-large.jpg",
-      "smallImage": "img/portfolio/08-small.jpg"
+      "smallImage": "img/portfolio/08-small.jpeg"
     },
     {
       "title": "Project Title",
       "largeImage": "img/portfolio/09-large.jpg",
-      "smallImage": "img/portfolio/09-small.jpg"
+      "smallImage": "img/portfolio/09-small.jpeg"
     }
   ],
   "Services": [
@@ -100,55 +100,47 @@
   "Testimonials": [
     {
       "img": "img/testimonials/01.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "text": "Wow that's actually really good.",
+      "name": ""
     },
     {
       "img": "img/testimonials/02.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "text": "I definitely feel sexier after eating this soup.",
+      "name": ""
     },
     {
       "img": "img/testimonials/03.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "text": "The soup on Lau 2 is actually so good.",
+      "name": ""
     },
     {
       "img": "img/testimonials/04.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "text": "Very potent flavor. As soon as you put it in your mouth, it just punches you with flavor.",
+      "name": ""
     },
     {
       "img": "img/testimonials/05.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "text": "Vegan butternut squash: rich in flavor, beautiful color, excellent consistency, the perfect saltiness. Everything I ever dreampt it would be.",
+      "name": ""
     },
     {
       "img": "img/testimonials/06.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.",
+      "name": ""
     }
   ],
   "Team": [
     {
-      "img": "img/team/01.jpg",
-      "name": "John Doe",
-      "job": "Director"
+      "img": "img/team/A.jpeg",
+      "name": "Audrey Biles",
+      "job": "Co-Founder",
+      "bio":"Audrey Biles is a student in Georgetown's College of Arts and Sciences. Interested in wellness and sustainability, Audrey is the co-founder of Stir the Pot, a fast-casual food startup in Georgetown Ventures' startup launchpad program. As an analyst with HoyAlytics and creative strategist with the Georgetown Marketing Association, Audrey explores her passion for data-driven branding techniques and utilizes this in her consulting work for food-related businesses. In her column “The Hungry Hoya” — published bi-weekly in Georgetown's student-led newspaper The Hoya — Audrey celebrates local food entrepreneurs while simultaneously fueling her personal curiousity for DC culture. A lifelong dancer, Audrey enjoys teaching dance to underserved members of her community in her free time."
     },
     {
-      "img": "img/team/02.jpg",
-      "name": "Mike Doe",
-      "job": "Senior Designer"
-    },
-    {
-      "img": "img/team/03.jpg",
-      "name": "Jane Doe",
-      "job": "Senior Designer"
-    },
-    {
-      "img": "img/team/04.jpg",
-      "name": "Karen Doe",
-      "job": "Project Manager"
+      "img": "img/team/S.jpg",
+      "name": "Stella Peters",
+      "job": "Co-Founder",
+      "bio": "Stella Peters is a student in Georgetown University's College of Arts and Sciences. She is majoring in Government and minoring in Environmental Studies and Italian. She is a member of the McDonough School of Business “Sustainable Business Fellows” and is the Cofounder of sustainable fast-casual soup concept, Stir the Pot, with Georgetown Ventures' Launchpad entrepreneurship program. As a consultant for Georgetown Eco Consultants, she has worked with the National Parks Conservation Association and Barber Engineering to create greater profitability through reduction of energy use and increased environmental awareness. She was the founder, editor, and producer of Folding Chair Magazine and is passionate about journalism, a skill that she hones as a writer for The Hoya in her column titled “Climate Matters.” In her free time, Stella is a pilates instructor for The 100s Pilates in Manhattan, she enjoys playing guitar, cooking, surfing, and painting."
     }
   ],
   "Contact": {
