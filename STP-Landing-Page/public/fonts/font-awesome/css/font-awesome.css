@@ -12,8 +12,15 @@
   font-style: normal;
 }
 @font-face {
-  font-family: saatliches;
-  src: url('../fonts/Saatliches-Regular.ttf');
+  font-family: staatliches;
+  src: url('../fonts/Staatliches-Regular.ttf');
+}
+@font-face {
+  font-family: cormorantgaramond;
+  src: url('../fonts/CormorantGaramond-BoldItalic.ttf');
+}@font-face {
+  font-family: cormorantgaramond-medium;
+  src: url('../fonts/CormorantGaramond-Medium.ttf');
 }
 .fa {
   display: inline-block;

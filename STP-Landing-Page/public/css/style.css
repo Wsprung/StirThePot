@@ -81,10 +81,10 @@ hr {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 #menu a.navbar-brand {
-  font-family: "Raleway", sans-serif;
-  font-size: 24px;
+  font-family: cormorantgaramond-medium;
+  font-size: 30px;
   font-weight: 700;
-  color: #333;
+  color: #ef530a;
   text-transform: uppercase;
 }
 #menu.navbar-default .navbar-nav > li > a {
@@ -163,11 +163,11 @@ hr {
   font-size: 18px;
 }
 .btn-custom {
-  font-family: "Raleway", sans-serif;
+  font-family: staatliches;
   text-transform: uppercase;
   color: #fff;
-  background-color: #5ca9fb;
-  background-image: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+  background-color: #ad5616;
+  background-image: linear-gradient(to right, #ad5616 0%, #515019 100%);
   padding: 14px 34px;
   letter-spacing: 1px;
   margin: 0;
@@ -175,7 +175,7 @@ hr {
   font-weight: 500;
   border-radius: 25px;
   transition: all 0.5s linear;
-  border: 0;
+  border: 3px solid black;
 }
 .btn-custom:hover,
 .btn-custom:focus,
@@ -208,8 +208,7 @@ a:focus,
   display: table;
   width: 100%;
   padding: 0;
-  background: url(../img/intro-bg.jpg) center center no-repeat;
-  background-color: #e5e5e5;
+  background-color: #2b5b2b;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -224,7 +223,7 @@ a:focus,
   font-size: 82px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: 0;
+  margin-top: -50px;
   margin-bottom: 10px;
 }
 .intro h1 span {
@@ -232,6 +231,7 @@ a:focus,
   color: #5ca9fb;
 }
 .intro p {
+  font-family: cormorantgaramond-medium;
   color: #fff;
   font-size: 22px;
   font-weight: 300;
@@ -240,9 +240,15 @@ a:focus,
   margin-bottom: 60px;
 }
 header .intro-text {
-  padding-top: 350px;
-  padding-bottom: 200px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   text-align: center;
+}
+.header-logo-STP {
+  margin-top: -20px;
+  position: relative;
+  height: 60%;
+  width: 60%;
 }
 /* Features Section */
 #features {
@@ -464,7 +470,7 @@ header .intro-text {
   color: rgba(255, 255, 255, 0.75);
 }
 #contact .section-title {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 #contact .section-title p {
   font-size: 16px;
@@ -472,8 +478,10 @@ header .intro-text {
 #contact h2 {
   color: #fff;
   margin-top: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   padding-bottom: 15px;
+  font-family: staatliches;
+  font-size: 40px;
 }
 #contact .section-title h2::after {
   position: absolute;
@@ -506,6 +514,9 @@ header .intro-text {
 #contact .btn-custom:hover {
   color: #1f386e;
   background: #fff;
+}
+.check-the-soups {
+  font-size: 15px;
 }
 label {
   font-size: 12px;
@@ -547,6 +558,11 @@ label {
 }
 .form-control:-ms-input-placeholder {
   color: #777;
+}
+.checkbox-soup {
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;  optional - this centers the components horizontally */
 }
 #contact .contact-item {
   margin: 20px 0;
