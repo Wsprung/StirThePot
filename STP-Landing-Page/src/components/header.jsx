@@ -9,7 +9,7 @@ export const Header = (props) => {
           <div className="container">
             <div className="row">
               <div className="col-md-8 col-md-offset-2 intro-text">
-              <img src = "../public/img/header-logo.png" alt = "Logo" className = "header-STP-logo"/>
+              <img src = "https://drive.google.com/uc?export=view&id=1_xlMO0m4daYlUn3bI585C-yErzG8vKtD" alt = "Logo" className = "header-logo-STP"/>
                 <h1>
                   <span></span>
                 </h1>

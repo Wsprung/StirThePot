@@ -15,6 +15,13 @@
   font-family: staatliches;
   src: url('../fonts/Staatliches-Regular.ttf');
 }
+@font-face {
+  font-family: cormorantgaramond;
+  src: url('../fonts/CormorantGaramond-BoldItalic.ttf');
+}@font-face {
+  font-family: cormorantgaramond-medium;
+  src: url('../fonts/CormorantGaramond-Medium.ttf');
+}
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
