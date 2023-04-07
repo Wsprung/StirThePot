@@ -131,24 +131,16 @@
   ],
   "Team": [
     {
-      "img": "img/team/01.jpg",
-      "name": "John Doe",
-      "job": "Director"
+      "img": "img/team/A.jpeg",
+      "name": "Audrey Biles",
+      "job": "Co-Founder",
+      "bio":"Audrey Biles is a student in Georgetown's College of Arts and Sciences. Interested in wellness and sustainability, Audrey is the co-founder of Stir the Pot, a fast-casual food startup in Georgetown Ventures' startup launchpad program. As an analyst with HoyAlytics and creative strategist with the Georgetown Marketing Association, Audrey explores her passion for data-driven branding techniques and utilizes this in her consulting work for food-related businesses. In her column “The Hungry Hoya” — published bi-weekly in Georgetown's student-led newspaper The Hoya — Audrey celebrates local food entrepreneurs while simultaneously fueling her personal curiousity for DC culture. A lifelong dancer, Audrey enjoys teaching dance to underserved members of her community in her free time."
     },
     {
-      "img": "img/team/02.jpg",
-      "name": "Mike Doe",
-      "job": "Senior Designer"
-    },
-    {
-      "img": "img/team/03.jpg",
-      "name": "Jane Doe",
-      "job": "Senior Designer"
-    },
-    {
-      "img": "img/team/04.jpg",
-      "name": "Karen Doe",
-      "job": "Project Manager"
+      "img": "img/team/S.jpg",
+      "name": "Stella Peters",
+      "job": "Co-Founder",
+      "bio": "Stella Peters is a student in Georgetown University's College of Arts and Sciences. She is majoring in Government and minoring in Environmental Studies and Italian. She is a member of the McDonough School of Business “Sustainable Business Fellows” and is the Cofounder of sustainable fast-casual soup concept, Stir the Pot, with Georgetown Ventures' Launchpad entrepreneurship program. As a consultant for Georgetown Eco Consultants, she has worked with the National Parks Conservation Association and Barber Engineering to create greater profitability through reduction of energy use and increased environmental awareness. She was the founder, editor, and producer of Folding Chair Magazine and is passionate about journalism, a skill that she hones as a writer for The Hoya in her column titled “Climate Matters.” In her free time, Stella is a pilates instructor for The 100s Pilates in Manhattan, she enjoys playing guitar, cooking, surfing, and painting."
     }
   ],
   "Contact": {
