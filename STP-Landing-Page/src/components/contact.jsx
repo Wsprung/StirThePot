@@ -68,6 +68,12 @@ export const Contact = (props) => {
     clearState();
 
   }
+  const [isChickenNoodle, setIsChickenNoodle] = useState(false)
+  const [isTomato, setIsTomato] = useState(false)
+  const [isButternutSquash, setIsButternutSquash] = useState(false)
+  const [Email, setEmail] = useState("")
+  const [Name, setName] = useState("")
+
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
@@ -130,19 +136,18 @@ export const Contact = (props) => {
                 <div className="form-group">
                   <div className = "checkbox-soup">
                     <label className = "check-the-soups">Check off the soup(s) you are ordering</label>
-                    <label>
-                      <input type="checkbox"
-                       checked={chickenNoodleChecked} onChange={(e) => handleCheckboxChange(e, 1)} />
-                      Chicken Noodle Soup
-                    </label>
-                    <label>
-                      <input type="checkbox" checked={tortillaChecked} onChange={(e) => handleCheckboxChange(e, 2)} />
-                      Tortilla Soup
-                    </label>
-                    <label>
-                      <input type="checkbox" checked={butternutSquashChecked} onChange={(e) => handleCheckboxChange(e, 3)} />
-                      Vegan Butternut Squash
-                    </label>
+                      <label>
+                        <input type="checkbox" checked={isChickenNoodle} onChange={() => {setIsChickenNoodle(!isChickenNoodle)}} />
+                        Chicken Noodle Soup
+                      </label>
+            <label>
+              <input type="checkbox" checked={isTomato} onChange={() => {setIsTomato(!isTomato)}} />
+              Tomato Soup
+            </label>
+            <label>
+              <input type="checkbox" checked={isButternutSquash} onChange={() => {setIsButternutSquash(!isButternutSquash)}} />
+              Butternut Squash
+            </label>
                     <p className="help-block text-danger"></p>
                       <div className="form-group">
                         <textarea
