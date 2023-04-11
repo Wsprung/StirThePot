@@ -49,7 +49,7 @@ export const Navigation = (props) => {
             </li>
             <li>
               <a href="#contact" className="page-scroll">
-                Contact
+                Order Form
               </a>
             </li>
           </ul>

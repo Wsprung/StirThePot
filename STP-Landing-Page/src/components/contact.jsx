@@ -5,51 +5,19 @@ import React from "react";
 const initialState = {
   name: '',
   email: '',
-  chickenNoodle: false,
-  tortilla: false,
-  butternutSquash: false,
-  customization: ' ',
+  customization: '',
 };
 export const Contact = (props) => {
-  const [{ name, email, chickenNoodle, tortilla, butternutSquash, customization }, setState] = useState(initialState);
-  const [chickenNoodleChecked, setCN ] = useState(false);
-  const [tortillaChecked, setT ] = useState(false);
-  const [butternutSquashChecked, setBNS ] =useState (false);
+  const [{ name, email, customization }, setState] = useState(initialState);
+  const [isChickenNoodle, setIsChickenNoodle] = useState(false)
+  const [isTortilla, setIsTortilla] = useState(false)
+  const [isButternutSquash, setIsButternutSquash] = useState(false)
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setState((prevState) => ({ ...prevState, [name]: value }));
   };
-  const clearState = () => setState({ ...initialState });
-
-  function handleCheckboxChange(event, value) {
-    event.preventDefault();
-   
-    if(value == 1) {
-      setCN(event.target.checked);
-      setState(prevState => ({
-        ...prevState,
-        chickenNoodle: true
-      }));
-    }
-    else if(value == 2) {
-      setT(event.target.checked);
-      setState(prevState => ({
-          ...prevState,
-          tortilla: true
-        }));
-    }
-    else if(value == 3) {
-      setBNS(event.target.checked);
-      setState(prevState => ({
-        ...prevState,
-        butternutSquash: true
-      }));
-      
-      //setIsChecked(event.target.checked); // Setting checkbox to checked for UI, also sets isChecked to true (need to keep to change box to checked)
-  }
-  }
-
+  
   // function that will handle the form submission
   // uses the fetch API to send the data to backend API using the POST method
   // using sheet.best API
@@ -63,38 +31,26 @@ export const Contact = (props) => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ name, email, chickenNoodle, tortilla, butternutSquash, customization }), // passing in formData object as request body
+      body: JSON.stringify({ name, email, isChickenNoodle, isTortilla, isButternutSquash, customization }), // passing in formData object as request body
     });
-    clearState();
-
+    
+    setState({ 
+      name: '',
+      email: '',
+      customization: ' ',
+    });
+    setIsChickenNoodle(false);
+    setIsTortilla(false);
+    setIsButternutSquash(false);
   }
-  const [isChickenNoodle, setIsChickenNoodle] = useState(false)
-  const [isTomato, setIsTomato] = useState(false)
-  const [isButternutSquash, setIsButternutSquash] = useState(false)
-  const [Email, setEmail] = useState("")
-  const [Name, setName] = useState("")
 
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log(name, email, message);
-  //   emailjs
-  //     .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_USER_ID")
-  //     .then(
-  //       (result) => {
-  //         console.log(result.text);
-  //         clearState();
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //       }
-  //     );
-  // };
   return (
     <div>
       <div id="contact">
-        <div className="container">
-          <div className="col-md-8">
+        <div className = "form-bg-outline">
+        <div className="form-container">
+          <div className="form-group col-md-6">
             <div className="row">
               <div className="section-title">
                 <h2>ORDER FORM</h2>
@@ -114,6 +70,7 @@ export const Contact = (props) => {
                         placeholder="Name"
                         required
                         onChange={handleChange}
+                        value = {name}
                       />
                       <p className="help-block text-danger"></p>
                     </div>
@@ -128,42 +85,43 @@ export const Contact = (props) => {
                         placeholder="Email"
                         required
                         onChange={handleChange}
+                        value = {email}
                       />
                       <p className="help-block text-danger"></p>
                     </div>
                   </div>
                 </div>
-                <div className="form-group">
-                  <div className = "checkbox-soup">
+                <div className= "form-group form-check">
+               <div className = "checkbox-soup">
                     <label className = "check-the-soups">Check off the soup(s) you are ordering</label>
                       <label>
                         <input type="checkbox" checked={isChickenNoodle} onChange={() => {setIsChickenNoodle(!isChickenNoodle)}} />
                         Chicken Noodle Soup
                       </label>
             <label>
-              <input type="checkbox" checked={isTomato} onChange={() => {setIsTomato(!isTomato)}} />
+              <input type="checkbox" checked={isTortilla} onChange={() => {setIsTortilla(!isTortilla)}} />
               Tomato Soup
             </label>
             <label>
               <input type="checkbox" checked={isButternutSquash} onChange={() => {setIsButternutSquash(!isButternutSquash)}} />
               Butternut Squash
             </label>
-                    <p className="help-block text-danger"></p>
-                      <div className="form-group">
-                        <textarea
-                          name="customization"
-                          id="customization"
-                          className="form-control"
-                          rows="1"
-                          placeholder="Customization"
-                          required
-                          onChange={handleChange}
-                        ></textarea>
-                        <p className="help-block text-danger"></p>
-                      </div>
-                  </div>
-                </div>
-                <div id="success"></div>
+            </div>
+              <p className="help-block text-danger"></p>
+                  <div className="form-group">
+                     <input
+                       name="customization"
+                       id="customization"
+                       className="form-control"
+                       rows="1"
+                       placeholder="Customization"
+                       required
+                       onChange= {handleChange}
+                       value = {customization}
+                     ></input>
+              <p className="help-block text-danger"></p>
+           </div>
+           </div>
                 {/* CHANGE H1 TO BUTTON ONCE FORM ALLOWS ORDERS TO SUBMIT */}
                 <button type="submit" className="btn btn-custom btn-lg">
                   Coming Soon
@@ -171,7 +129,7 @@ export const Contact = (props) => {
               </form>
             </div>
           </div>
-          <div className="col-md-3 col-md-offset-1 contact-info">
+          {/* <div className="col-md-3 col-md-offset-1 contact-info">
             <div className="contact-item">
               <h3>Contact Info</h3>
               <p>
@@ -197,7 +155,9 @@ export const Contact = (props) => {
                 {props.data ? props.data.email : "loading"}
               </p>
             </div>
-          </div>
+          </div> */}
+        </div>
+        
           <div className="col-md-12">
             <div className="row">
               <div className="social">

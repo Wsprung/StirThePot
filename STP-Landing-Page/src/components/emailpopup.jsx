@@ -46,7 +46,7 @@ function EmailPopup() {
           <div className="form-control" class="input">
             <label htmlFor="input-field">Please enter your email to be added to our mailing list!</label>
             <br/><br/>
-            <input type="text" name="input" id="inputField" class="input-box" {...register('input', {required: true})} />
+            <input type="text" name="input" id="inputField" placeholder="Email" required class="input-box" {...register('input', {required: true})} />
             {errors.input && <span>This field is required.</span>}
           </div>
           <br/><br/><br/>
