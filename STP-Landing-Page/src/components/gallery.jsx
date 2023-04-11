@@ -7,9 +7,9 @@ export const Gallery = (props) => {
       <div className="container">
         <div className="section-title">
           <h2>Happenings</h2>
-          <p>
+          <h3 class="gallery-paragraph">
             See what we've been up to!
-          </p>
+          </h3>
         </div>
         <div className="row">
           <div className="portfolio-items">
