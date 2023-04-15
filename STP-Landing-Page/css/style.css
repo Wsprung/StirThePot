@@ -442,10 +442,8 @@ header .intro-text {
   overflow: hidden;
 }
 .testimonial-content p {
-  font-family: cormorantgaramond-medium;
-  color:#232323;
   margin-bottom: 0;
-  font-size: 18px;
+  font-size: 14px;
   font-style: italic;
 }
 .testimonial-meta {
