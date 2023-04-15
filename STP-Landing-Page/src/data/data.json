@@ -27,7 +27,7 @@
     {
       "title": "Project Title",
       "largeImage": "img/portfolio/02-large.jpg",
-      "smallImage": "img/portfolio/05-small.jpeg"
+      "smallImage": "img/portfolio/02-small.jpg"
     },
     {
       "title": "Project Title",
@@ -42,7 +42,7 @@
     {
       "title": "Project Title",
       "largeImage": "img/portfolio/05-large.jpg",
-      "smallImage": "img/portfolio/02-small.png"
+      "smallImage": "img/portfolio/05-small.jpeg"
     },
     {
       "title": "Project Title",
@@ -125,7 +125,7 @@
     },
     {
       "img": "img/testimonials/06.jpg",
-      "text": "Before Stir the Pot, soup was something I only ate when I was sick. With their protein options and customizeable toppings, Stir the Pot is revolutionizing soup.",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.",
       "name": ""
     }
   ],
