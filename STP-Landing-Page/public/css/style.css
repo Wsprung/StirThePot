@@ -11,7 +11,9 @@ html {
 h2,
 h3,
 h4 {
-  font-family: "Raleway", sans-serif;
+  /*font-family: "Raleway", sans-serif;*/
+  font-family: staatliches;
+  color:#2b5b2b;
 }
 h2 {
   text-transform: uppercase;
@@ -104,7 +106,7 @@ hr {
   bottom: -1px;
   width: 0;
   height: 2px;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  background: linear-gradient(to right, #ad5616 0%, #515019 100%);
   content: "";
   transition: width 0.2s;
 }
@@ -125,7 +127,7 @@ hr {
   bottom: -1px !important;
   width: 100% !important;
   height: 2px !important;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%) !important;
+  background: linear-gradient(to right, #ad5616 0%, #515019 100%) !important;
   content: "" !important;
   transition: width 0.2s !important;
 }
@@ -152,7 +154,7 @@ hr {
 .section-title h2::after {
   position: absolute;
   content: "";
-  background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+  background: linear-gradient(to right, #ad5616 0%, #515019 100%);
   height: 4px;
   width: 60px;
   bottom: 0;
@@ -263,7 +265,7 @@ header .intro-text {
   height: 100px;
   padding: 30px 0;
   border-radius: 50%;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  background: linear-gradient(to right, #ad5616 0%, #515019 100%);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
 }
 /* About Section */
@@ -282,13 +284,15 @@ header .intro-text {
 #about h2::after {
   position: absolute;
   content: "";
-  background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+  background: linear-gradient(to right, #ad5616 0%, #515019 100%);
   height: 4px;
   width: 60px;
   bottom: 0;
-  left: 0;
+  left: 245;
 }
 #about .about-text li {
+  display: flex;
+  justify-content: center;
   margin-bottom: 6px;
   margin-left: 6px;
   list-style: none;
@@ -312,11 +316,14 @@ header .intro-text {
 #about p {
   line-height: 24px;
   margin: 30px 0;
+  font-family: cormorantgaramond-medium;
+  color:#333;
+  font-size: 20px;
 }
 /* Services Section */
 #services {
   padding: 100px 0;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  background: linear-gradient(to right, #ad5616 0%, #515019 100%);
   color: #fff;
 }
 #services .service-desc {
@@ -340,7 +347,7 @@ header .intro-text {
   width: 120px;
   height: 120px;
   padding: 40px 0;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  background: linear-gradient(to right, #ad5616 0%, #515019 100%);
   border-radius: 50%;
   color: #fff;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
@@ -375,9 +382,7 @@ header .intro-text {
   margin: 0 auto;
   color: #fff;
   background: linear-gradient(
-    to right,
-    rgba(99, 114, 255, 0.8) 0%,
-    rgba(92, 169, 251, 0.8) 100%
+    (to right, #ad5616 0%, #515019 100%)
   );
   padding: 30% 0 0;
   height: 100%;
@@ -436,7 +441,9 @@ header .intro-text {
 }
 .testimonial-content p {
   margin-bottom: 0;
-  font-size: 14px;
+  font-family: cormorantgaramond-medium;
+  color:#232323;
+  font-size: 18px;
   font-style: italic;
 }
 .testimonial-meta {
@@ -449,11 +456,19 @@ header .intro-text {
 #team {
   padding: 100px 0;
 }
-#team h4 {
+.team-name {
+  font-family: "Raleway", sans-serif;
   margin: 5px 0;
+  color: #ef530a;
+}
+#team p {
+  font-family: cormorantgaramond-medium;
+  color:#333;
+  font-size: 18px;
 }
 #team .team-img {
   width: 240px;
+  border: 3px solid #2b5b2b;
 }
 #team .thumbnail {
   background: transparent;
@@ -466,7 +481,7 @@ header .intro-text {
 /* Contact Section */
 #contact {
   padding: 100px 0 60px;
-  background: #1a4066; 
+  background: #2b5b2b; 
   /* background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%); */
   color: rgba(255, 255, 255, 0.75);
   display: flex;
@@ -632,6 +647,12 @@ label {
 }
 #footer a:hover {
   border-bottom: 2px solid #608dfd;
+}
+
+/*gallery*/
+.gallery-paragraph{
+  font-family: cormorantgaramond-medium;
+  color:#333;
 }
 
 @media (max-width: 768px) {
